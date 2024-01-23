@@ -1,0 +1,27 @@
+.slider {
+    @apply relative;
+    height: 700px;
+    background-image: url('@assets/slider-image.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    &-wrapper {
+        @apply absolute left-0 top-0 w-full h-full;
+        padding: 0px 70px;
+        background: rgba(3, 9, 33, 0.52);
+        &-content {
+            @apply w-full h-full flex items-center justify-between;
+            &-info {
+                @apply text-center text-white;
+                max-width: 718px;
+                &-title {
+                    @apply font-extrabold capitalize;
+                    font-size: 40px;
+                }
+                &-description {
+                    @apply text-base font-medium mt-4;
+                    letter-spacing: 1.28px;
+                }
+            }
+        }
+    }
+}

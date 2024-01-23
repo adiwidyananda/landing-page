@@ -1,0 +1,25 @@
+.header {
+    height: 84px;
+    padding: 20px 70px;
+    &-menu {
+        @apply w-full h-full flex items-center justify-between;
+        &-left {
+            &-logo {
+                width: 47px;
+                height: 44px;
+            }
+        }
+        &-middle {
+            @apply flex items-center gap-3;
+            &-item {
+                @apply text-sm cursor-pointer;
+                padding: 0px 10px;
+                display: inline-block;
+                position: relative;
+            }
+        }
+        &-right {
+            @apply flex items-center gap-5;
+        }
+    }
+}
