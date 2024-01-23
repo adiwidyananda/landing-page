@@ -1,0 +1,48 @@
+.section {
+    @apply mx-auto;
+    max-width: 1188px;
+    &-wrapper {
+        @apply flex items-center justify-between;
+        &-image {
+            @apply w-full;
+            padding: 0px 32px 30px 0px;
+            &-content {
+                @apply relative;
+                img {
+                    @apply relative object-fill;
+                    z-index: 1;
+                }
+                &-outline {
+                    @apply absolute left-0 top-0 w-full h-full;
+                    margin-top: 30px;
+                    margin-left: 32px;
+                    border: 1px solid rgba(6, 17, 60, 0.56);
+                }
+            }
+        }
+        &-description {
+            @apply w-full flex items-center justify-center;
+            &-content {
+                @apply w-full;
+                max-width: 387px;
+                &-link {
+                    @apply flex items-center gap-2 font-medium text-grey-100;
+                    font-size: 13px;
+                }
+                &-title {
+                    @apply text-3xl font-bold text-primary-100;
+                    line-height: 140%;
+                    margin-top: 2px;
+                }
+                &-description {
+                    @apply text-sm text-primary-50;
+                    line-height: 160%;
+                    margin-top: 14px;
+                }
+                &-button {
+                    @apply mt-8;
+                }
+            }
+        }
+    }
+}

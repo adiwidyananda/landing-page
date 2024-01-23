@@ -4,14 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ["Nunito Sans", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       colors: {
-        green: {
-          primary: "#243C19",
+        primary: {
+          50: "#454545",
+          100: "#202020",
         },
-        gold: {
-          primary: "#ECD1AA",
+        grey: {
+          100: "#BABABA",
         },
       },
     },
