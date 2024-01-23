@@ -1,0 +1,36 @@
+.footer {
+    @apply text-white;
+    background: #010622;
+    padding: 40px 70px;
+    &-content {
+        @apply flex items-center justify-between;
+        &-left {
+            @apply w-full;
+            &-header {
+                @apply font-bold mb-7;
+                font-size: 28px;
+            }
+            &-item {
+                @apply mb-6;
+                &-top {
+                    @apply flex items-center gap-3;
+                }
+                &-extra {
+                    @apply text-base mt-2;
+                }
+            }
+        }
+        &-right {
+            @apply w-full h-full bg-white text-black;
+            &-form {
+                @apply p-5;
+                &-title {
+                    @apply text-2xl font-bold;
+                }
+                &-input {
+                    @apply flex flex-col gap-y-4 mt-6;
+                }
+            }
+        }
+    }
+}

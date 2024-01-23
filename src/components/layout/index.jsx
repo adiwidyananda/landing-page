@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "@components";
+import { Header, Footer } from "@components";
 
 function Layout() {
   return (
@@ -8,6 +8,7 @@ function Layout() {
       <div className="layout-body w-full">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }

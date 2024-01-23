@@ -1,13 +1,21 @@
 .btn {
+    @apply transition-all;
     padding: 14px 16px;
     background: #FF8C32;
     border-radius: 10px;
+    border: 1px solid #FF8C32;
     &:hover {
         @apply bg-white;
         border: 1px solid #06113C;
+        color: black;
     }
     &-text {
         @apply text-sm font-medium uppercase;
     }
+    &--secondary {
+        @apply text-white;
+        border: 1px solid #06113C;
+        background: #06113C;
+      }
   }
   
