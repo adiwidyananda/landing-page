@@ -3,6 +3,7 @@ import LongArrow from "@assets/long-arrow-icon.svg";
 import { Button } from "@components";
 
 function Section({
+  className,
   linkText,
   title,
   description,
@@ -10,7 +11,7 @@ function Section({
   imagePosition = "left",
 }) {
   return (
-    <div className="section">
+    <div className={cx("section", className)}>
       <div
         className={cx(
           "section-wrapper",

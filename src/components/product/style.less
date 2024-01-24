@@ -1,0 +1,40 @@
+.product {
+    @apply mx-auto;
+    max-width: 1047px;
+    &-header {
+        @apply mx-auto;
+        max-width: 559px;
+        &-title {
+            @apply text-center font-bold;
+            font-size: 40px;
+        }
+        &-description {
+            @apply text-center text-primary-50 text-sm;
+            margin-top: 14px;
+            letter-spacing: 1.12px;
+        }
+    }
+    &-list {
+        @apply mt-11 grid grid-cols-3 gap-y-12;
+        &-item {
+            @apply text-center;
+            &-image {
+                @apply rounded-full overflow-hidden mx-auto;
+                width: 200px;
+                height: 200px;
+            }
+            &-info {
+                @apply mx-auto;
+                max-width: 307px;
+                &-title {
+                    @apply mt-9 font-bold text-xl capitalize;
+                }
+                &-description {
+                    @apply mt-3 text-sm capitalize text-primary-50;
+                    line-height: 140%;
+                    letter-spacing: 1.12px;
+                }
+            }
+        }
+    }
+}

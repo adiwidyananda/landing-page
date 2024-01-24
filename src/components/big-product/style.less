@@ -1,0 +1,24 @@
+.big-product {
+    @apply mx-auto;
+    max-width: 1047px;
+    &-header {
+        @apply mx-auto;
+        max-width: 559px;
+        &-title {
+            @apply font-bold text-center;
+            font-size: 40px;
+            line-height: 160%;
+        }
+        &-description {
+            @apply font-medium text-center text-sm text-primary-50;
+            margin-top: 14px;
+            letter-spacing: 1.12px;
+        }
+    }
+    &-image {
+        @apply relative w-fit h-fit mx-auto mt-8;
+        &-play {
+            @apply absolute left-0 top-0 h-full w-full flex items-center justify-center;
+        }
+    }
+}
