@@ -48,7 +48,7 @@ function Footer() {
                 <TextArea label="Description" name="email" />
               </div>
               <div className="w-full flex justify-end">
-                <Button className="mt-8" type="secondary">
+                <Button htmlType="button" className="mt-8" type="secondary">
                   Request Now
                 </Button>
               </div>

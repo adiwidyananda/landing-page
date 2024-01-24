@@ -7,3 +7,4 @@ export { default as Layout } from "./layout";
 export { default as Container } from "./layout/container";
 export { default as Section } from "./section";
 export { default as Slider } from "./slider";
+export { default as Table } from "./table";

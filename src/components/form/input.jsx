@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputField = ({ value, label, name, placeholder, type }) => (
+const InputField = ({ value, label, name, placeholder, type, ...props }) => (
   <div className="form-group">
     {label && (
       <label className="input-label" htmlFor="input-field">
@@ -13,6 +13,7 @@ const InputField = ({ value, label, name, placeholder, type }) => (
       name={name}
       className="form-control"
       placeholder={placeholder}
+      {...props}
     />
   </div>
 );
