@@ -1,6 +1,7 @@
 .header {
+    @apply fixed top-0 z-10 w-full bg-white;
     height: 84px;
-    padding: 20px 70px;
+    padding: 20px 20px;
     &-menu {
         @apply w-full h-full flex items-center justify-between;
         &-left {
@@ -10,16 +11,123 @@
             }
         }
         &-middle {
-            @apply flex items-center gap-3;
+            @apply hidden md:flex items-center gap-3;
             &-item {
-                @apply text-sm cursor-pointer;
+                @apply text-sm cursor-pointer text-primary-150;
                 padding: 0px 10px;
                 display: inline-block;
                 position: relative;
             }
+            &-item:hover {
+                display: inline-block;
+                position: relative;
+            }
+            &-item-active {
+                @apply font-bold text-sm cursor-pointer text-primary-150; 
+                padding: 0px 10px;
+                display: inline-block;
+                position: relative;
+            }
+            &-item-active:after {
+                @apply bg-primary-150 rounded;
+                content: '';
+                position: absolute;
+                width: 36%;
+                transform: scaleX(1);
+                height: 3px;
+                margin-bottom: -4px;
+                bottom: 0;
+                left: 33%;
+              }
+            &-item:after {
+                @apply bg-primary-150 rounded;
+                content: '';
+                position: absolute;
+                color: #ECD1AA;
+                width: 36%;
+                transform: scaleX(0);
+                height: 3px;
+                bottom: 0;
+                margin-bottom: -4px;
+                left: 33%;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+              }
+              &-item:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
         }
         &-right {
-            @apply flex items-center gap-5;
+            @apply hidden md:flex items-center gap-5;
+            &-item {
+                @apply cursor-pointer;
+            }
         }
+        &-mobile {
+            @apply block md:hidden cursor-pointer;
+            img {
+                width: 24px;
+                height: 16px;
+            }
+        }
+    }
+    &-overlay {
+        @apply fixed top-0 left-0 z-40 hidden h-screen w-full bg-black bg-opacity-60 transition-all duration-500;
+    
+        &-visible {
+          @apply block;
+        }
+    }
+
+    &-mobile {
+        @apply fixed right-0 top-0 z-50 flex h-screen origin-left transform items-center bg-white text-black p-5 transition-transform duration-500 ease-in-out;
+        width: 80%;
+        max-width: 600px;
+        --tw-translate-x: 600px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    
+        &-visible {
+            --tw-translate-x: 0px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+    
+        &-box {
+          @apply flex h-full w-full flex-col;
+        }
+    
+        &-header {
+          @apply flex items-center justify-end border-b pb-5 text-lg text-white sm:text-3xl ;
+
+            &-logo {
+                width: 47px;
+                height: 44px;
+            }
+
+            &-close {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    
+        &-footer {
+          @apply flex flex-col items-center justify-between gap-2 border-t pt-5 text-white sm:flex-row;
+        }
+    
+        &-menu {
+          @apply flex flex-col gap-8 mt-8 text-black h-full text-xl font-semibold;
+          &-wrapper {
+            @apply flex justify-end;
+          }
+        }
+        &-bottom {
+            @apply flex justify-end items-center gap-5;
+        }
+      }
+}
+
+@screen md {
+    .header {
+        padding: 20px 70px;
     }
 }

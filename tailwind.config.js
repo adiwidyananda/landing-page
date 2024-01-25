@@ -10,6 +10,7 @@ export default {
         primary: {
           50: "#454545",
           100: "#202020",
+          150: "#06113C",
         },
         grey: {
           100: "#BABABA",
