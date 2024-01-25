@@ -27,7 +27,9 @@ function Header() {
     <div className="header">
       <div className="header-menu">
         <div className="header-menu-left">
-          <img src={Logo} className="header-menu-left-logo" alt="" />
+          <Link to="/">
+            <img src={Logo} className="header-menu-left-logo" alt="" />
+          </Link>
         </div>
         <div className="header-menu-middle">
           <Link to="/">
@@ -55,6 +57,17 @@ function Header() {
           </h3>
           <h3 className="header-menu-middle-item">News & Event</h3>
           <h3 className="header-menu-middle-item">Beranda</h3>
+          <Link to="/calculator">
+            <h3
+              className={cx(
+                pathname === "/calculator"
+                  ? "header-menu-middle-item-active"
+                  : "header-menu-middle-item"
+              )}
+            >
+              Calculator
+            </h3>
+          </Link>
         </div>
         <div className="header-menu-right">
           <img
@@ -130,6 +143,19 @@ function Header() {
             </div>
             <div className="header-mobile-menu-wrapper">
               <h3 className="header-menu-middle-item">Beranda</h3>
+            </div>
+            <div className="header-mobile-menu-wrapper">
+              <Link onClick={() => setVisible(false)} to="/calculator">
+                <h3
+                  className={cx(
+                    pathname === "/calculator"
+                      ? "header-menu-middle-item-active"
+                      : "header-menu-middle-item"
+                  )}
+                >
+                  Calculator
+                </h3>
+              </Link>
             </div>
           </div>
           <div className="header-mobile-bottom">
