@@ -11,6 +11,17 @@ import CloseIcon from "@assets/close.svg";
 function Header() {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
+  const onClickMenu = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const sectionTop = section.offsetTop - 84;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+    }
+    setVisible(false);
+  };
   return (
     <div className="header">
       <div className="header-menu">
@@ -18,17 +29,29 @@ function Header() {
           <img src={Logo} className="header-menu-left-logo" alt="" />
         </div>
         <div className="header-menu-middle">
+          <a href="/">
+            <h3
+              className={cx(
+                pathname === "/"
+                  ? "header-menu-middle-item-active"
+                  : "header-menu-middle-item"
+              )}
+            >
+              Home
+            </h3>
+          </a>
           <h3
-            className={cx(
-              pathname === "/"
-                ? "header-menu-middle-item-active"
-                : "header-menu-middle-item"
-            )}
+            onClick={() => onClickMenu("about-us")}
+            className="header-menu-middle-item"
           >
-            Home
+            About Us
           </h3>
-          <h3 className="header-menu-middle-item">About Us</h3>
-          <h3 className="header-menu-middle-item">Product</h3>
+          <h3
+            onClick={() => onClickMenu("product")}
+            className="header-menu-middle-item"
+          >
+            Product
+          </h3>
           <h3 className="header-menu-middle-item">News & Event</h3>
           <h3 className="header-menu-middle-item">Beranda</h3>
         </div>
@@ -73,21 +96,33 @@ function Header() {
           </div>
           <div className="header-mobile-menu">
             <div className="header-mobile-menu-wrapper">
+              <a href="/">
+                <h3
+                  className={cx(
+                    pathname === "/"
+                      ? "header-menu-middle-item-active"
+                      : "header-menu-middle-item"
+                  )}
+                >
+                  Home
+                </h3>
+              </a>
+            </div>
+            <div className="header-mobile-menu-wrapper">
               <h3
-                className={cx(
-                  pathname === "/"
-                    ? "header-menu-middle-item-active"
-                    : "header-menu-middle-item"
-                )}
+                onClick={() => onClickMenu("about-us")}
+                className="header-menu-middle-item"
               >
-                Home
+                About Us
               </h3>
             </div>
             <div className="header-mobile-menu-wrapper">
-              <h3 className="header-menu-middle-item">About Us</h3>
-            </div>
-            <div className="header-mobile-menu-wrapper">
-              <h3 className="header-menu-middle-item">Product</h3>
+              <h3
+                onClick={() => onClickMenu("product")}
+                className="header-menu-middle-item"
+              >
+                Product
+              </h3>
             </div>
             <div className="header-mobile-menu-wrapper">
               <h3 className="header-menu-middle-item">News & Event</h3>

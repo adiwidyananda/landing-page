@@ -17,7 +17,7 @@ function Product({ className, data }) {
     );
   }
   return (
-    <div className={cx("product", className)}>
+    <div id="product" className={cx("product", className)}>
       <div className="product-header">
         <div className="product-header-title">Our Product</div>
         <div className="product-header-description">

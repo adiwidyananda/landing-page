@@ -60,6 +60,7 @@ function LandingPage() {
             image={Rempah}
           />
           <Section
+            id="about-us"
             className="mt-[100px] md:mt-[150px]"
             title="About Us ?"
             description="Use this pragraph to explain the purpose of the contest, the impact that the winning entries will have, and the overall benefits for participants, beyond just the prizes. But mention the wonderful prize too!"

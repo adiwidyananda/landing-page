@@ -4,6 +4,7 @@ import { Button } from "@components";
 
 function Section({
   className,
+  id,
   linkText,
   title,
   description,
@@ -11,7 +12,7 @@ function Section({
   imagePosition = "left",
 }) {
   return (
-    <div className={cx("section", className)}>
+    <div id={id} className={cx("section", className)}>
       <div
         className={cx(
           "section-wrapper",
