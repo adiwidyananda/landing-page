@@ -7,6 +7,7 @@ import BagIcon from "@assets/bag-icon.svg";
 import SearchIcon from "@assets/search-icon.svg";
 import Hamburger from "@assets/hamburger.svg";
 import CloseIcon from "@assets/close.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { pathname } = useLocation();
@@ -29,7 +30,7 @@ function Header() {
           <img src={Logo} className="header-menu-left-logo" alt="" />
         </div>
         <div className="header-menu-middle">
-          <a href="/">
+          <Link to="/">
             <h3
               className={cx(
                 pathname === "/"
@@ -39,7 +40,7 @@ function Header() {
             >
               Home
             </h3>
-          </a>
+          </Link>
           <h3
             onClick={() => onClickMenu("about-us")}
             className="header-menu-middle-item"
@@ -96,7 +97,7 @@ function Header() {
           </div>
           <div className="header-mobile-menu">
             <div className="header-mobile-menu-wrapper">
-              <a href="/">
+              <Link onClick={() => setVisible(false)} to="/">
                 <h3
                   className={cx(
                     pathname === "/"
@@ -106,7 +107,7 @@ function Header() {
                 >
                   Home
                 </h3>
-              </a>
+              </Link>
             </div>
             <div className="header-mobile-menu-wrapper">
               <h3
