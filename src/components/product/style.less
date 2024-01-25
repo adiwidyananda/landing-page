@@ -6,7 +6,7 @@
         max-width: 559px;
         &-title {
             @apply text-center font-bold;
-            font-size: 40px;
+            font-size: 28px;
         }
         &-description {
             @apply text-center text-primary-50 text-sm;
@@ -15,7 +15,7 @@
         }
     }
     &-list {
-        @apply mt-11 grid grid-cols-3 gap-y-12;
+        @apply mt-11 grid grid-cols-1 md:grid-cols-3 gap-y-12;
         &-item {
             @apply text-center;
             &-image {
@@ -36,5 +36,11 @@
                 }
             }
         }
+    }
+}
+
+@screen md {
+    .product-header-title {
+        font-size: 40px
     }
 }

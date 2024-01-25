@@ -18,16 +18,6 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-content">
-        <div className="footer-content-left">
-          <div className="footer-content-left-header">Head Office</div>
-          <Item
-            icon={Location}
-            description="Semarang"
-            extra="8502 Preston Rd. Inglewood, Maine 98380"
-          />
-          <Item icon={Sms} description="info.rempahwangi@gmail.com" />
-          <Item icon={Call} description="021-928376263" />
-        </div>
         <div className="footer-content-right">
           <div className="footer-content-right-form">
             <form action="">
@@ -54,6 +44,16 @@ function Footer() {
               </div>
             </form>
           </div>
+        </div>
+        <div className="footer-content-left">
+          <div className="footer-content-left-header">Head Office</div>
+          <Item
+            icon={Location}
+            description="Semarang"
+            extra="8502 Preston Rd. Inglewood, Maine 98380"
+          />
+          <Item icon={Sms} description="info.rempahwangi@gmail.com" />
+          <Item icon={Call} description="021-928376263" />
         </div>
       </div>
     </div>

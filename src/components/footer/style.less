@@ -1,11 +1,11 @@
 .footer {
     @apply text-white;
     background: #010622;
-    padding: 40px 70px;
+    padding: 40px 20px;
     &-content {
-        @apply flex items-center justify-between;
+        @apply block md:flex flex-row-reverse items-center justify-between;
         &-left {
-            @apply w-full;
+            @apply w-full mt-10 md:mt-0;
             &-header {
                 @apply font-bold mb-7;
                 font-size: 28px;
@@ -32,5 +32,11 @@
                 }
             }
         }
+    }
+}
+
+@screen md {
+    .footer {
+        padding: 40px 70px;
     }
 }

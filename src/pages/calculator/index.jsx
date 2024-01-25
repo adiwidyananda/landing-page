@@ -1,5 +1,6 @@
 import { useBitcoin, useIDRtoBTC, useBTCtoIDR } from "@libs/hooks/bitcoin";
 import { Table, Container, InputField } from "@components";
+import { debounce } from "lodash";
 import { useState } from "react";
 
 function CalculatorPage() {
@@ -8,6 +9,12 @@ function CalculatorPage() {
   const { data } = useBitcoin();
   const { result: bitcoinValue } = useIDRtoBTC(rupiah);
   const { result: rupiahValue } = useBTCtoIDR(bitcoin);
+  const getRupiahValue = debounce((value) => {
+    setRupiah(value);
+  }, 1000);
+  const getBitcoinValue = debounce((value) => {
+    setBitcoin(value);
+  }, 1000);
   return (
     <Container className="calculator-page">
       <div className="calculator-page-section">
@@ -25,7 +32,7 @@ function CalculatorPage() {
         </h3>
         <InputField
           type="number"
-          onChange={(e) => setRupiah(e.target.value ? e.target.value : 0)}
+          onChange={(e) => getRupiahValue(e.target.value ? e.target.value : 0)}
         />
         <h1 className="calculator-page-section-title mt-4">
           Rp {rupiah} = BTC {bitcoinValue}
@@ -40,7 +47,7 @@ function CalculatorPage() {
         </h3>
         <InputField
           type="number"
-          onChange={(e) => setBitcoin(e.target.value ? e.target.value : 0)}
+          onChange={(e) => getBitcoinValue(e.target.value ? e.target.value : 0)}
         />
         <h1 className="calculator-page-section-title mt-4 mb-10">
           BTC {bitcoin} = RP {rupiahValue}

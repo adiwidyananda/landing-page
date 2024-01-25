@@ -6,7 +6,7 @@
         max-width: 559px;
         &-title {
             @apply font-bold text-center;
-            font-size: 40px;
+            font-size: 28px;
             line-height: 160%;
         }
         &-description {
@@ -20,5 +20,11 @@
         &-play {
             @apply absolute left-0 top-0 h-full w-full flex items-center justify-center;
         }
+    }
+}
+
+@screen md {
+    .big-product-header-title {
+        font-size: 40px
     }
 }

@@ -52,21 +52,24 @@ function LandingPage() {
               wonderful prize too!"
             image={WhyUsImage}
           />
-          <Product className="mt-[150px]" data={dummyProduct} />
+          <Product className="mt-[100px] md:mt-[150px]" data={dummyProduct} />
           <BigProduct
-            className="mt-[150px]"
+            className="mt-[100px] md:mt-[150px]"
             title="Rempah Wangi"
             description="Lorem ipsum dolor sit amet consectetur. Blandit velit nulla sed faucibus libero in nam pharetra."
             image={Rempah}
           />
           <Section
-            className="mt-[150px]"
+            className="mt-[100px] md:mt-[150px]"
             title="About Us ?"
             description="Use this pragraph to explain the purpose of the contest, the impact that the winning entries will have, and the overall benefits for participants, beyond just the prizes. But mention the wonderful prize too!"
             image={AboutUsImage}
             imagePosition="right"
           />
-          <Certificate className="mt-[150px]" data={dummyCertificate} />
+          <Certificate
+            className="mt-[100px] md:mt-[150px]"
+            data={dummyCertificate}
+          />
         </Container>
       </div>
     </div>
