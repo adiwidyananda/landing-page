@@ -32,7 +32,9 @@ function CalculatorPage() {
         </h3>
         <InputField
           type="number"
-          onChange={(e) => getRupiahValue(e.target.value ? e.target.value : 0)}
+          onChange={(e) =>
+            getRupiahValue(e.target.value > 0 ? e.target.value : 0)
+          }
         />
         <h1 className="calculator-page-section-title mt-4">
           Rp {rupiah} = BTC {bitcoinValue}
@@ -47,7 +49,9 @@ function CalculatorPage() {
         </h3>
         <InputField
           type="number"
-          onChange={(e) => getBitcoinValue(e.target.value ? e.target.value : 0)}
+          onChange={(e) =>
+            getBitcoinValue(e.target.value > 0 ? e.target.value : 0)
+          }
         />
         <h1 className="calculator-page-section-title mt-4 mb-10">
           BTC {bitcoin} = RP {rupiahValue}

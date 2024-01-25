@@ -6,41 +6,15 @@ import {
   BigProduct,
   Certificate,
 } from "@components";
-import EssentialOil from "@assets/essential-oil.png";
-import LeafOil from "@assets/leaf-oil.png";
-import Vanilla from "@assets/vanilla.png";
 import Rempah from "@assets/rempah.png";
 import AboutUsImage from "@assets/about-us.png";
 import WhyUsImage from "@assets/why-us-image.png";
-import Fssc from "@assets/fssc.png";
-import Cosmos from "@assets/cosmos.png";
-import Halal from "@assets/halal.png";
-import Klbd from "@assets/klbd.png";
-
-const dummyProduct = [
-  {
-    title: "Essential Oil",
-    description: "Provide some details about this category.",
-    image: EssentialOil,
-  },
-  {
-    title: "Clove Leaf Oil Derivates",
-    description: "Provide some details about this category.",
-    image: LeafOil,
-  },
-  {
-    title: "Vanilla",
-    description: "Provide some details about this category.",
-    image: Vanilla,
-  },
-];
-
-const dummyCertificate = [Fssc, Cosmos, Halal, Klbd];
+import { dummyProduct, dummyCertificate, dummySlider } from "@libs/utils/dummy";
 
 function LandingPage() {
   return (
     <div className="landing-page">
-      <Slider />
+      <Slider data={dummySlider} />
       <div className="landing-page-content">
         <Container>
           <Section

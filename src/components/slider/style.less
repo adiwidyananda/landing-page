@@ -3,7 +3,7 @@
     height: 700px;
     background-image: url('@assets/slider-image.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     &-wrapper {
         @apply absolute left-0 top-0 w-full h-full;
         padding: 0px 20px;
@@ -11,7 +11,8 @@
         &-content {
             @apply w-full h-full flex items-center justify-between;
             &-info {
-                @apply text-center text-white;
+                min-height: 384px;
+                @apply text-center text-white mx-auto px-12 lg:px-0 flex items-center;
                 max-width: 718px;
                 &-title {
                     @apply font-extrabold capitalize;
@@ -33,4 +34,16 @@
             font-size: 40px;
         }
     }
+}
+
+.swiper {
+    @apply w-full;
+}
+
+.arrow-left {
+    @apply absolute left-0 top-0 h-full items-center flex z-10 cursor-pointer;
+}
+
+.arrow-right {
+    @apply absolute right-0 top-0 h-full items-center flex z-10 cursor-pointer;
 }
